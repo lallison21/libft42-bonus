@@ -1,6 +1,8 @@
 <h1 align="center">LIBFT</h1>
 <h3 align="center">It's first project in École 42/21 School</h3>
 
+<h4> This project is about coding a own C library. <br>  </h4>
+
 <table align="center">
   <thead>
     <tr> <th> № </th> <th width="250"> Function name </th> <th width="600"> Descriprion </th> </tr>
