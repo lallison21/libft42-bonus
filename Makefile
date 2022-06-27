@@ -18,7 +18,8 @@ HEADER		=	libft.h
 OBJ			=	$(SRCS:%.c=%.o) $(SRCS_BONUS:%.c=%.o)
 
 CC			=	gcc
-CFLAGS		=	-Wall -Wextra -Werror -I$(HEADER)
+CFLAGS		=	-Wall -Wextra -Werror
+RM			=	rm -rf
 
 WHITE   	=	\033[0m
 BLACK   	=	\033[0;30m
@@ -33,7 +34,7 @@ CYAN    	=	\033[0;36m
 
 all			:	$(NAME)
 
-$(NAME)		:	$(OBJ) $(HEADER)
+$(NAME)		:	$(OBJ)
 				@ar rcs $(NAME) $?
 				@echo "\n[$(BLUE)LIBFT$(WHITE)] OBJECT FILES CREATED\n\c"
 				@echo "[$(BLUE)LIBFT$(WHITE)] ARCHIVE FILE CREATED\n\c"
@@ -43,7 +44,7 @@ $(NAME)		:	$(OBJ) $(HEADER)
 				@echo "$(GREEN)❱$(WHITE)\c"
 
 clean		:
-				@rm -f $(OBJ) $(OBJ_B)
+				@$(RM) $(OBJ) $(OBJ_B)
 
 fclean		:	clean
 				@$(RM) $(NAME)
